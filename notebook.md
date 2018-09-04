@@ -9,6 +9,10 @@ You will add to your notebook in bullet form for each week what you have done. P
   * vagrant
   * github
   * linux
+* signed up for accounts on
+  * XSEDE
+  * ChameleonCloud
+  * FutureSystems
 
 # Week Fri 07/31/18 - 13/06/18
 
