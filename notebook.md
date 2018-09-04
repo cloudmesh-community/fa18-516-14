@@ -3,7 +3,12 @@ You will add to your notebook in bullet form for each week what you have done. P
 # Week Fri 08/31/18 - 09/06/18
 
 * Attended lecture
-* reviewed python
+* contributed linux commands:  https://github.com/cloudmesh-community/book/pull/14
+* reviewed and performed exercises for
+ * virtualbox
+ * vagrant
+ * github
+ * linux
 
 # Week Fri 07/31/18 - 13/06/18
 
