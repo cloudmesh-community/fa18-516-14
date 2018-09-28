@@ -4,3 +4,12 @@ owner:
   lastname: "Manipon"
   hid: "fa18-516-14"
   community: "e516"
+  section:
+    - title: "Packer"
+        url: https://github.com/cloudmesh-community/book/chapters/cloud/packer.md
+  chapter:
+    - title: "Cloud Computing Use Cases"
+        url: https://github.com/cloudmesh-community/book/chapters/use_cases/earth_science.md
+  project:
+    - title: "Hybrid Cloud Science Data System on Kubernetes"
+        url: https://github.com/pymonger
