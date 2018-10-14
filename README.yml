@@ -6,9 +6,11 @@ owner:
   community: "e516"
 section:
   - title: "Packer"
+    keyword: Packer
     url: https://github.com/cloudmesh-community/book/chapters/cloud/packer.md
-chapter:
+paper:
   - title: "Cloud Computing Use Cases"
+    keyword: Cloud use cases
     url: https://github.com/cloudmesh-community/book/chapters/cloud/use-cases.md
 project:
   - title: "Hybrid Cloud Science Data System on Kubernetes"
