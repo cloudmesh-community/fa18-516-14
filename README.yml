@@ -8,11 +8,11 @@ owner:
 section:
   - title: "Packer"
     keyword: Packer
-    url: https://github.com/cloudmesh-community/book/chapters/cloud/packer.md
+    url: https://github.com/cloudmesh-community/book/blob/master/chapters/cloud/packer.md
 paper:
   - title: "Cloud Computing Use Cases"
     keyword: Cloud use cases
-    url: https://github.com/cloudmesh-community/book/chapters/cloud/use-cases.md
+    url: https://github.com/cloudmesh-community/book/blob/master/chapters/cloud/use-cases.md
 project:
   - title: "HySDS on Kubernetes: ARIA InSAR Processing on XSEDE Jetstream"
     keyword: hybrid cloud science data system kubernetes
