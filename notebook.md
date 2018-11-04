@@ -1,5 +1,22 @@
 You will add to your notebook in bullet form for each week what you have done. Please make sure you update it every week even if you have no time to work on anything. YOu can surely spend 2 minutes to update this document.
 
+# Week Fri 10/26/18 - 11/01/18
+
+* worked on final project:
+  * initial investigation into ARIA adaptation
+
+# Week Fri 10/19/18 - 10/25/18
+
+* worked on final project:
+  * adaptation of code/config bundle to use kubernetes configmap and secrets
+  * update hysds core to generalize handling of volume mounts whether running on native cloud environments or on K8s
+
+# Week Fri 10/12/18 - 10/18/18
+
+* worked on final project:
+  * port of `metrics`, `factotum` and `ci` components to k8s
+  * update hysds core to support Kubernetes: https://github.com/hysds/hysds/commit/dbe9474313c0180bd32fc78de150acd1374a0d29
+
 # Week Fri 10/05/18 - 10/11/18
 
 * worked on final project: initial port of `mozart` and `grq` components to k8s

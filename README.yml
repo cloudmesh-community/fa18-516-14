@@ -4,6 +4,7 @@ owner:
   lastname: "Manipon"
   hid: "fa18-516-14"
   community: "e516"
+  semester: "fa18"
 section:
   - title: "Packer"
     keyword: Packer
@@ -13,5 +14,7 @@ paper:
     keyword: Cloud use cases
     url: https://github.com/cloudmesh-community/book/chapters/cloud/use-cases.md
 project:
-  - title: "Hybrid Cloud Science Data System on Kubernetes"
-    url: https://github.com/pymonger/hysds-k8s
+  - title: "HySDS on Kubernetes: ARIA InSAR Processing on XSEDE Jetstream"
+    keyword: hybrid cloud science data system kubernetes
+    url: https://github.com/cloudmesh-community/fa18-516-14/tree/master/project-report/
+code: https://github.com/pymonger/hysds-k8s/tree/grfn-jetstream-iu
