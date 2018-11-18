@@ -16,5 +16,5 @@ paper:
 project:
   - title: "HySDS on Kubernetes: ARIA InSAR Processing on XSEDE Jetstream"
     keyword: hybrid cloud science data system kubernetes
-    url: https://github.com/cloudmesh-community/fa18-516-14/tree/master/project-report/
-code: https://github.com/pymonger/hysds-k8s/tree/grfn-jetstream-iu
+    url: https://github.com/cloudmesh-community/fa18-516-14/blob/master/project-report/report.md
+    code: https://github.com/pymonger/hysds-k8s/tree/grfn-jetstream-iu
