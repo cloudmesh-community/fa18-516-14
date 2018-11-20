@@ -1,5 +1,20 @@
 You will add to your notebook in bullet form for each week what you have done. Please make sure you update it every week even if you have no time to work on anything. YOu can surely spend 2 minutes to update this document.
 
+# Week Fri 11/16/18 - 11/22/18
+
+* worked on final project:
+  * finalization
+
+# Week Fri 11/09/18 - 11/15/18
+
+* worked on final project:
+  * run ARIA adaption
+
+# Week Fri 11/02/18 - 11/08/18
+
+* worked on final project:
+  * initial implementation of ARIA adaptation
+
 # Week Fri 10/26/18 - 11/01/18
 
 * worked on final project:
