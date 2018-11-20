@@ -106,7 +106,7 @@ The main source for this dataset is the SciHub portal at https://scihub.copernic
 
 ### Sentinel-1 Orbits and Calibrations
 
-In order to process the Sentinel-1 SLC dataset into an interferogram, the ISCE PGE needs multiple ancillary files pertaining to the satellite acquisition date of each SLC. It needs the precise orbit files (https://qc.sentinel1.eo.esa.int/aux_poeorb/) and it needs the auxilliary calibration files (https://qc.sentinel1.eo.esa.int/aux_cal/).
+In order to process the Sentinel-1 SLC dataset into an interferogram, the ISCE PGE needs multiple ancillary files pertaining to the satellite acquisition date of each SLC. It needs the precise orbit files (https://qc.sentinel1.eo.esa.int/aux_poeorb/) and it needs the auxiliary calibration files (https://qc.sentinel1.eo.esa.int/aux_cal/).
 
 ### DEMs
 
@@ -501,7 +501,7 @@ Alternately, the Mozart REST API is a Swagger/OpenAPI-compliant REST interface t
 
 ![Figaro](images/figaro.png){#fig:figaro}
 
-The figaro interface provides a faceted view of the HySDS cluster's resource managment. This includes job state information as well as information on tasks, workers, and events. Alternately, the RabbitMQ admin interface provides a real-time view of the job queues:
+The figaro interface provides a faceted view of the HySDS cluster's resource management. This includes job state information as well as information on tasks, workers, and events. Alternately, the RabbitMQ admin interface provides a real-time view of the job queues:
 
 ![RabbitMQ Admin](images/rabbitmq.png){#fig:rabbitmq}
 
@@ -511,7 +511,7 @@ The figaro interface provides a faceted view of the HySDS cluster's resource man
 
 ## Benchmark
 
-After running a few Sentinel-1 inteferogram jobs, we can log into the Kibana job metrics interface on the metrics node to view the average execution time of these jobs:
+After running a few Sentinel-1 interferogram jobs, we can log into the Kibana job metrics interface on the metrics node to view the average execution time of these jobs:
 
 ![Sentinel-1 Interferogram Job Metrics](images/metrics-jobs.png){#fig:metrics-jobs}
 
