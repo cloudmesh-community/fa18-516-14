@@ -471,7 +471,41 @@ You should now see both jobs registered in Jenkins:
 
 ![Build ariamh](images/jenkins-build_ariamh.png){#fig:jenkins-build_ariamh}
 
+### Submit Sentinel-1 Interferogram Jobs
 
+To facilitate running the Sentinel-1 Interferogram pipeline in Kubernetes without having to ingest 1TB of input datasets, we copy the dataset indexes from the ARIA HySDS cluster at JPL. Access to these indexes requires special permissions so please contact me at gmanipon@jpl.nasa.gov for more information. Assuming the indexes have been set up on the grq component of the HySDS/Kubernetes/Jetstream cluster, you should see SLCs, precise orbits and calibration files available in the tosca interface:
+
+![Input Datasets](images/tosca-input_datasets.png){#fig:tosca-input_datasets}
+
+We can now use the tosca interface to submit Sentinel-1 interferogram jobs.
+
+1. In the tosca interface, draw a bounding box over an area of interest. In our case, we draw a box over the area north of Los Angeles. We then facet down to the S1-IW_SLC dataset type and track 71:
+
+![AOI - Los Angeles track 71](images/tosca-los_angeles-t71.png){#fig:tosca-los_angeles-t71}
+
+2. Click on the "On-Demand" button. This will bring up a modal window that will allow you to submit jobs based on the result set that was faceted down to. Select the "Sentinel-1 Interferogram Product [jetstream-iu-k8s]" action and select the "grfn-job_worker-small" queue:
+
+![Configure Job](images/tosca-job_submission.png){#fig:tosca-job_submission}
+
+The PGE-specific parameters below can be used unchanged. Click on "Process Now" to submit the job:
+
+![Submit Job](images/tosca-job_submission2.png){#fig:tosca-job_submission2}
+
+Alternately, the Mozart REST API is a Swagger/OpenAPI-compliant REST interface that can be used to submit jobs:
+
+![Mozart REST API](images/swagger-mozart.png){#fig:swagger-mozart}
+
+3. Monitor the jobs that were submitted by navigating to the figaro interface:
+
+![Figaro](images/figaro.png){#fig:figaro}
+
+The figaro interface provides a faceted view of the HySDS cluster's resource managment. This includes job state information as well as information on tasks, workers, and events. Alternately, the RabbitMQ admin interface provides a real-time view of the job queues:
+
+![RabbitMQ Admin](images/rabbitmq.png){#fig:rabbitmq}
+
+4. When the Sentinel-1 interferogram jobs complete, they can be viewed via the tosca interface by faceting on the S1-IFG dataset type:
+
+![Sentinel-1 Interferogram](images/tosca-ifg.png){#fig:tosca-ifg}
 
 ## Benchmark
 
