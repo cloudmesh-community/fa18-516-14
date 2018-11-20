@@ -413,6 +413,66 @@ Oct 27 15:51:33 hysds-kube-node-3 kubelet: I1027 15:51:33.227417    3320 kubelet
 Oct 27 15:51:33 hysds-kube-node-3 kubelet: I1027 15:51:33.458241    3320 kubelet_node_status.go:73] Successfully registered node hysds-kube-node-3.novalocal
 ```
 
+You should now have a running Kubernetes cluster configured with the in-tree OpenStack Cloud Provider.
+
+### Create HySDS Buckets (Swift Containers)
+
+Using the OpenStack dashboard, we now need to create 2 buckets: one for the PGE docker images and one for the datasets.
+
+![Code Bucket](images/jetstream-hysds-code-bucket.png){#fig:jetstream-hysds-code-bucket}
+
+![Dataset Bucket](images/jetstream-hysds-dataset-bucket.png){#fig:jetstream-hysds-dataset-bucket}
+
+### Create the HySDS cluster
+
+Next we provision our HySDS cluster:
+
+1. Log into kube-master via ssh.
+2. Clone the `hysds-k8s` repository and checkout the `grfn-jetstream-iu` branch:
+```
+git clone https://github.com/pymonger/hysds-k8s
+cd hysds-k8s
+git checkout grfn-jetstream-iu
+```
+3. Run the `create_hysds_cluster.sh` script to provision all HySDS-related Kubernetes resources:
+```
+./create_hysds_cluster.sh
+```
+Note that the script requires 4 arguments:
+- AWS Access Key for the ARIA datasets bucket hosted by JPL
+- AWS Secret Key for the ARIA datasets bucket hosted by JPL
+- Swift Access Key for the HySDS code and dataset buckets hosted on IU Jetstream
+- Swift Secret Key for the HySDS code and dataset buckets hosted on IU Jetstream
+4. Run the `get_urls.sh` script to list the urls for all HySDS web interfaces and REST APIs:
+```
+./get_urls.sh
+```
+
+### Register the lightweight-jobs and ariamh repositories in Jenkins
+
+1. Log into kube-master via ssh.
+2. Log into the mozart pod using kubectl:
+```
+kubectl exec -ti mozart bash
+```
+3. Register the lightweight-jobs repo to Jenkins:
+```
+sds ci add_job -k -b master https://github.com/hysds/lightweight-jobs.git s3
+```
+4. Register the ariamh repo to Jenkins:
+```
+sds ci add_job -k -b jetstream-iu-k8s https://github.com/hysds/ariamh.git s3
+```
+You should now see both jobs registered in Jenkins:
+
+![Jenkins Jobs](images/jenkins-jobs.png){#fig:jenkins-jobs}
+
+5. Log into the Jenkins web interface and push the builds for lightweight-jobs and ariamh. You should see the jobs build to completion via the console log output:
+
+![Build ariamh](images/jenkins-build_ariamh.png){#fig:jenkins-build_ariamh}
+
+
+
 ## Benchmark
 
 ## Conclusion
