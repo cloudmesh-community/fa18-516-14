@@ -413,7 +413,9 @@ Oct 27 15:51:33 hysds-kube-node-3 kubelet: I1027 15:51:33.227417    3320 kubelet
 Oct 27 15:51:33 hysds-kube-node-3 kubelet: I1027 15:51:33.458241    3320 kubelet_node_status.go:73] Successfully registered node hysds-kube-node-3.novalocal
 ```
 
-You should now have a running Kubernetes cluster configured with the in-tree OpenStack Cloud Provider.
+You should now have a running Kubernetes cluster configured with the in-tree OpenStack Cloud Provider:
+
+![Kubernetes Info](images/k8s-info.png){#fig:k8s-info}
 
 ### Create HySDS Buckets (Swift Containers)
 
@@ -508,6 +510,12 @@ The figaro interface provides a faceted view of the HySDS cluster's resource man
 ![Sentinel-1 Interferogram](images/tosca-ifg.png){#fig:tosca-ifg}
 
 ## Benchmark
+
+After running a few Sentinel-1 inteferogram jobs, we can log into the Kibana job metrics interface on the metrics node to view the average execution time of these jobs:
+
+![Sentinel-1 Interferogram Job Metrics](images/metrics-jobs.png){#fig:metrics-jobs}
+
+We note that it takes an average of 45 minutes to run each job on the HySDS/Kubernetes/Jetstream cluster. In comparison, the ARIA HySDS cluster on AWS takes an average of 25 minutes to run each job. Worker nodes on the ARIA HySDS cluster utilize the c5.9xlarge EC2 instance type (36 vCPUs and 72GB RAM) vs. the worker nodes on the HySDS/Kubernetes/Jetstream cluster which utilize the m1.xlarge flavor (24 vCPUs and 60GB RAM). This discrepancy shows that the ISCE PGE performs better when it is given more vCPUs and RAM to work with.
 
 ## Conclusion
 
