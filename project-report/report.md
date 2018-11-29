@@ -329,7 +329,8 @@ hysds-kube-node-1.novalocal
 4. They need to match for the in-tree OpenStack cloud provider to work so use the dashboard or the CLI to change the instance name to match the FQDN.
 5. Do this for the master and all kube nodes.
 #### On the master node
-6. Create the cloud config file which contains the pertinent OpenStack configuration as `/etc/kubernetes/cloud.conf`. This info can be pulled from the OpenStack rc file. Note that if the `availability zone` for Nova instances and Cinder volumes are different, set the `ignore-volume-az` parameter to `true`. You can determine this by creating an openstack instance and cinder volume and comparing the `availability zone` they exist in [Cloud Providers - Kubernetes](https://kubernetes.io/docs/concepts/cluster-administration/cloud-providers/#openstack):
+6. Create the cloud config file which contains the pertinent OpenStack configuration as `/etc/kubernetes/cloud.conf`. This info can be pulled from the OpenStack rc file. Note that if the `availability zone` for Nova instances and Cinder volumes are different, set the `ignore-volume-az` parameter to `true`. You can determine this by creating an openstack instance and cinder volume and comparing the `availability zone` they exist in 
+[Cloud Providers - Kubernetes](https://kubernetes.io/docs/concepts/cluster-administration/cloud-providers/#openstack):
 ```
 [Global]
 auth-url=https://iu.jetstream-cloud.org:5000/v3
