@@ -4,7 +4,7 @@
 | gmanipon@iu.edu, laszewski@gmail.com, hook.hua@jpl.nasa.gov
 | Indiana University, Indiana University, NASA Jet Propulsion Laboratory
 | hid: fa18-516-14
-| github: [:cloud:](https://github.com/cloudmesh-community/fa18-516-14/blob/master/report.md)
+| github: [:cloud:](https://github.com/cloudmesh-community/fa18-516-14/blob/master/project-report/report.md)
 | code: [:cloud:](https://github.com/pymonger/hysds-k8s/tree/grfn-jetstream-iu)
 
 ---
