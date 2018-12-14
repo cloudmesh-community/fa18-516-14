@@ -1,4 +1,4 @@
-# HySDS on Kubernetes: ARIA InSAR Processing on XSEDE Jetstream :hand: fa18-516-14
+# HySDS on Kubernetes: ARIA InSAR Processing on XSEDE Jetstream
 
 | Gerald Manipon, Gregor von Laszewski, Hook Hua
 | gmanipon@iu.edu, laszewski@gmail.com, hook.hua@jpl.nasa.gov
